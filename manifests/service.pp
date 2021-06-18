@@ -17,9 +17,12 @@ class hitch::service (
   LimitNOFILE=65536
   | LIMITS
 
-  systemd::dropin_file { 'limits.conf':
+  systemd::resources::override { 'limits.conf':
     unit    => $service_name,
-    content => $hitch_dropin,
+    ensure    => present,
     notify  => Service[$service_name],
+    overrides => {
+      'LimitNOFILE' => 65536
+    }
   }
 }
