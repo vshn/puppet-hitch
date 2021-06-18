@@ -1,7 +1,0 @@
-fixtures:
-  forge_modules:
-    concat: "puppetlabs/concat"
-    inifile: "puppetlabs/inifile"
-    stdlib: "puppetlabs/stdlib"
-    systemd: "camptocamp/systemd"
-    translate: "puppetlabs/translate"
